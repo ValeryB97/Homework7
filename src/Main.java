@@ -6,7 +6,6 @@ public class Main {
         int i = 1;
         while (annualSavings < 2_459_000) {
             annualSavings = annualSavings + deposit;
-            annualSavings = annualSavings + annualSavings / 100;
             System.out.println("Месяц " + i++ + " Сумма накоплений равна  " + annualSavings);
         }
         // Задание 2
@@ -44,22 +43,28 @@ public class Main {
             }
         }
         // Задание 6
-        for (; month <= 108; month++) {
-            amountSavings = amountSavings + (amountSavings * 7 / 100);
-            if (month % 6 == 0) {
-                System.out.println("Месяц " + month + " сумма накоплений = " + amountSavings);
+        int deposit2 = 15000;
+        int amountSavings2 = 0;
+        int month1 = 1;
+        amountSavings2 = amountSavings2 + deposit2;
+        for (; month1 <= 108; month1++) {
+            amountSavings2 = amountSavings2 + (amountSavings2 * 7 / 100);
+            if (month1 % 6 == 0) {
+                System.out.println("Месяц " + month1 + " сумма накоплений = " + amountSavings2);
             }
         }
         // Задание 7
-        int friday = 3;
+        int friday = 5;
         for (; friday <= 31; friday = friday + 7) {
-            System.out.println("Сегодня пятнница, " + friday + "-е число. Необходимо подготовить отчет.");
+            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
         }
         // Задание 8
-        int h = 0;
-        for (; h < 2124; h = h + 79) {
-            if (h > 1824) {
-                System.out.println(h);
+        int currentYear = 2024;
+        int begin = currentYear - 200;
+        int end = currentYear + 100;
+        for (int p = 0; p < end; p += 79) {
+            if (p > begin) {
+                System.out.println(p);
             }
         }
     }
