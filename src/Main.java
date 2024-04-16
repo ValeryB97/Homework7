@@ -33,32 +33,31 @@ public class Main {
         }
         // Задание 4 и 5
         int deposit1 = 15000;
-        int amountSavings = 0;
         int month = 1;
-        amountSavings = amountSavings + deposit1;
-        for (; amountSavings <= 12_000_000; month++) {
-            amountSavings = amountSavings + (amountSavings * 7 / 100);
+        for (; deposit1 <= 12_000_000; month++) {
+            deposit1 = (int) (deposit1 * 1.07);
             if (month % 6 == 0) {
-                System.out.println("Месяц " + month + " сумма накоплений = " + amountSavings);
+                System.out.println("Месяц " + month + " сумма накоплений = " + deposit1);
             }
         }
         // Задание 6
         int deposit2 = 15000;
-        int amountSavings2 = 0;
         int month1 = 1;
-        amountSavings2 = amountSavings2 + deposit2;
         for (; month1 <= 108; month1++) {
-            amountSavings2 = amountSavings2 + (amountSavings2 * 7 / 100);
+            deposit2 = (int) (deposit2 * 1.07);
             if (month1 % 6 == 0) {
-                System.out.println("Месяц " + month1 + " сумма накоплений = " + amountSavings2);
+                System.out.println("Месяц " + month1 + " сумма накоплений = " + deposit2);
             }
         }
         // Задание 7
-        int friday = 5;
-        for (; friday <= 31; friday = friday + 7) {
-            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
+        //В нашем месяце 31 день.
+        int friday = 4;
+        for (; friday <= 31; friday += 7) {
+            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо сделать отчет.");
         }
         // Задание 8
+        //  Известно, что комета пролетает каждый 79-й год, начиная с нулевого.
+        // В консоль нужно вывести все годы за последние 200 лет, когда появлялась комета, а также следующий год ее появления (ближайшие 100 лет).
         int currentYear = 2024;
         int begin = currentYear - 200;
         int end = currentYear + 100;
